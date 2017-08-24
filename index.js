@@ -11,7 +11,7 @@ app.use(cors());
 
 massive(connectionString).then(db => {
     app.set('db', db);
-})
+});
 
 app.get('/api/products', pc.getAll);
 app.get('/api/product/:id', pc.getOne);
